@@ -11,6 +11,7 @@
       {home-manager.useUserPackages = true;}
       {home-manager.useGlobalPkgs = true;}
       {home-manager.users.ometic.imports = homeProfiles.zelix;}
+      {nixpkgs.overlays = [inputs.nur.overlay];}
 ];
     };
   };

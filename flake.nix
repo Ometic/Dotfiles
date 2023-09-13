@@ -8,6 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ flake-parts, ... }:
@@ -16,9 +21,8 @@
         ./home/profiles
         ./hosts
       ];
-      systems = [ "x86_64-linux"  ];
+      systems = [ "x86_64-linux" ];
       perSystem = { config, self, inputs, pkgs, system, ... }: {
-        # Todo
       };
       flake = {
         # Todo

@@ -49,6 +49,8 @@
   # Enable sound.
   # sound.enable = true;
   # hardware.pulseaudio.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
   
   security.rtkit.enable = true;
   services.pipewire = {
@@ -68,7 +70,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-      firefox
       tree
     ];
   };
@@ -80,7 +81,6 @@
     wget
     foot
     pulseaudio
-    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
