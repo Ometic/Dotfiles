@@ -23,7 +23,9 @@
 
     firewall = {
       enable = true;
-      # Todo
+      allowedTCPPorts = [ 443 80 ];
+      allowedUDPPorts = [ 443 80 ];
+      allowPing = false;
     };
   };
 

@@ -25,10 +25,12 @@ local Options = {
   --// Indentation
   ["tabstop"] = 2,
   ["shiftwidth"] = 2,
+  ["smarttab"] = true,
   ["expandtab"] = true,
   ["autoindent"] = true,
-  ["smartindent"] = true,
   ["breakindent"] = true,
+  ["smartindent"] = true,
+  ["scrolloff"] = 10
 }
 
 --// Core \\--
