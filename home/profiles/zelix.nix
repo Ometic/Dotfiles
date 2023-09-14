@@ -2,6 +2,8 @@
   imports = [
     ../shell
 
+    ../desktop/hyprland
+
     ../programs/git.nix
     ../programs/ssh.nix
     ../programs/firefox.nix

@@ -12,6 +12,7 @@
           {nixpkgs.overlays=[inputs.nur.overlay inputs.neovim-nightly.overlay];}
 
           inputs.home-manager.nixosModule
+          inputs.hyprland.nixosModules.default
         ];
       };
     }

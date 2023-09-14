@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    hyprland.url = "github:hyprwm/Hyprland";
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
 
     home-manager = {
