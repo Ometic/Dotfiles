@@ -20,6 +20,7 @@
       imports = [
         ./home/profiles
         ./hosts
+        ./modules
       ];
       systems = [ "x86_64-linux" ];
       perSystem = { config, self, inputs, pkgs, system, ... }: {
