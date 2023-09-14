@@ -5,11 +5,10 @@
   in {
     zelix = nixosSystem {
       modules = [
-      ./zelix
+        ./zelix
 
-      inputs.home-manager.nixosModule
-      {home-manager.users.ometic.imports = homeProfiles.zelix;}
-] ++ sharedModules;
+        {home-manager.users.ometic.imports = homeProfiles.zelix;}
+      ] ++ sharedModules;
     };
   };
 }

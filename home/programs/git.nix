@@ -1,5 +1,3 @@
-{ config, ... }:
-
 {
   programs.git = {
     enable = true;
@@ -9,17 +7,16 @@
 
     extraConfig = ''
     [user]
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMtp59EptaeN8WrOZy4W7KtW6YFNyvVJXsih8sFllUu2
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMtp59EptaeN8WrOZy4W7KtW6YFNyvVJXsih8sFllUu2
 
-[gpg]
-  format = ssh
+    [gpg]
+    format = ssh
 
-[gpg "ssh"]
-  program = "/etc/profiles/per-user/ometic/bin/op-ssh-sign"
+    [gpg "ssh"]
+    program = "/etc/profiles/per-user/ometic/bin/op-ssh-sign"
 
-[commit]
-  gpgsign = true
-
+    [commit]
+    gpgsign = true
     '';
   };
 }
