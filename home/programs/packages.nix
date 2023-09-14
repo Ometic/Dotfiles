@@ -2,9 +2,14 @@
 
 {
   home.packages = with pkgs; [
-    _1password
-    _1password-gui
+    # Gui
+    _1password _1password-gui
+    (pkgs.discord.override { withVencord = true; })
 
-    neofetch
+    # Cli
+    neofetch xdg-utils
+
+    # Temp
+    rofi
   ];
 }
