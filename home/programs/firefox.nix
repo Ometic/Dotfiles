@@ -54,7 +54,7 @@
 
 	"privacy.history.custom" = true;
 	"privacy.donottrackheader.enabled" = true;
-	"privacy.sanitize.sanitizeOnShutdown" = true;
+	"privacy.sanitize.sanitizeOnShutdown" = false;
 	"privacy.trackingprotection.enabled" = true;
 	"privacy.tracknigprotection.socialtracking.enabled" = true;
 
