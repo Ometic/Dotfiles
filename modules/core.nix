@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # Temp
+  programs.zsh.enable = true;
+
   # Fonts
   fonts = {
     packages = with pkgs; [
@@ -58,6 +61,7 @@
       ometic = {
         isNormalUser = true;
         extraGroups = [ "wheel" ];
+        shell = pkgs.zsh;
       };
     };
   };

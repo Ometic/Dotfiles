@@ -1,5 +1,7 @@
 {
   imports = [
+    ../shell
+
     ../programs/git.nix
     ../programs/ssh.nix
     ../programs/firefox.nix
