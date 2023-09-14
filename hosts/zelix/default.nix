@@ -8,6 +8,8 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
+  zramSwap.enable = true;
+
   # Temp
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
