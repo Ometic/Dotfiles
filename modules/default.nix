@@ -5,11 +5,7 @@
     {
       _module.args = { 
         sharedModules = [
-	  ./network.nix
-          ./sounds.nix
-	  ./security.nix
-          ./fonts.nix
-          ./user.nix
+          ./core.nix
 
           {home-manager.useUserPackages = true;}
           {home-manager.useGlobalPkgs = true;}
