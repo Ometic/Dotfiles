@@ -10,8 +10,9 @@
     vimAlias = true;
 
     extraLuaConfig = ''
-    require("core.options")
-    require("core.maps")
+      require("core.options")
+      require("core.maps")
+      require("core.autocmds")
     '';
   };
 }
