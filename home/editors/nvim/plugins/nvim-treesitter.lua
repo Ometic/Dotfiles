@@ -1,8 +1,9 @@
 --// Core \\--
 local PluginConfig = {}
+PluginConfig["Plugin"] = require("nvim-treesitter.configs")
 
 PluginConfig["Options"] = {
-  ["ensure_installed"] = { "lua" },
+  ["ensure_installed"] = {},
   ["auto_install"] = false,
   ["highlight"] = {
     ["enable"] = true,

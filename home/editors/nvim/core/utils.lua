@@ -36,10 +36,12 @@ function Utils.LoadPlugin(Name)
     error("Failed to load plugin config: " .. Name .. " (PLUGIN_CONFIG_NOT_FOUND)")
   end
 
-  local Success, Plugin = pcall(require, Name)
-  if not Success or type(Plugin) ~= "table" then
+  local Success, _Plugin = pcall(require, Name)
+  if not Success or type(_Plugin) ~= "table" then
     error("Failed to load plugin: " .. Name .. " (PLUGIN_NOT_FOUND)")
   end
+
+  local Plugin = PluginConfig["Plugin"] or _Plugin
 
   PluginConfig["Options"] = PluginConfig["Options"] or {}
   PluginConfig["NOptions"] = PluginConfig["NOptions"] or {}
@@ -53,7 +55,7 @@ function Utils.LoadPlugin(Name)
   Utils.LoadAutocmds(PluginConfig["Autocmds"])
   Utils.LoadMappings(PluginConfig["Mappings"])
 
-  PluginConfig.Config = PluginConfig.Config or function(Plugin) end
+  PluginConfig.Config = PluginConfig.Config or function(_) end
   PluginConfig.Config(Plugin)
 end
 
