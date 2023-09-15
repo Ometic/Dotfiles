@@ -8,8 +8,5 @@
 
     # Cli
     neofetch xdg-utils
-
-    # Temp
-    rofi
   ];
 }
