@@ -10,6 +10,7 @@
         onepassword-password-manager
         web-scrobbler
         darkreader
+        stylus
       ];
 
       userChrome = builtins.readFile ./userChrome.css;
