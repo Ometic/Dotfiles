@@ -29,11 +29,16 @@ in {
     ];
 
     extraLuaConfig = ''
-      local Utils = require("core.utils")
+      --// Imports \\--
+      Utils = require("core.utils")
 
+      --// Core \\--
+      --// Core
       require("core.options")
       require("core.maps")
       require("core.autocmds")
+
+      --// Plugins
     '';
   };
 }

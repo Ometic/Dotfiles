@@ -1,7 +1,7 @@
 --// Imports \\--
 local Api = vim.api
 local Keymap = vim.keymap
-local Option = vim.option
+local Option = vim.opt
 
 --// Core \\--
 local Utils = {}

@@ -1,6 +1,3 @@
---// Imports \\--
-local Option = vim.opt
-
 --// Variables \\--
 local Options = {
   --// General
@@ -34,6 +31,4 @@ local Options = {
 }
 
 --// Core \\--
-for Key, Value in next, Options do
-  Option[Key] = Value
-end
+Utils.LoadOptions(Options)

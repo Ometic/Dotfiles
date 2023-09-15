@@ -1,5 +1,4 @@
 --// Imports \\--
-local Keymap = vim.keymap
 local Global = vim.g
 
 --// Variables \\--
@@ -25,10 +24,4 @@ local Maps = {
 --// Core \\--
 Global["mapleader"] = " "
 
-for Mode, Value in next, Maps do
-  for Key, Map in next, Value do
-    local Command = Map[1]
-    Map[1] = nil
-    Keymap.set(Mode, Key, Command, Map)
-  end
-end
+Utils.LoadMappings(Maps)

@@ -1,5 +1,4 @@
 --// Imports \\--
-local Api = vim.api
 local Option = vim.opt
 
 --// Variables \\--
@@ -14,9 +13,4 @@ local Autocmds = {
 }
 
 --// Core \\--
-for _, Cmd in next, Autocmds do
-  local On = Cmd["on"]
-  Cmd["on"] = nil
-
-  Api.nvim_create_autocmd(On, Cmd)
-end
+Utils.LoadAutocmds(Autocmds)
