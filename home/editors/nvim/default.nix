@@ -23,12 +23,14 @@ in {
     plugins = with pkgs.vimPlugins; [
       {
         plugin = catppuccin;
-        config = "require('plugins.catppuccin').Config()";
+        config = ''Utils.LoadPlugin("catppuccin")'';
         type = "lua";
       } 
     ];
 
     extraLuaConfig = ''
+      local Utils = require("core.utils")
+
       require("core.options")
       require("core.maps")
       require("core.autocmds")
