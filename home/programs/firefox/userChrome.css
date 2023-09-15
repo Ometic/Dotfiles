@@ -1,0 +1,165 @@
+/****************************
+>> Ometic Cascade Config
+
+>> Features
+>> - All config in 1 file
+>> - Multi-Line theme
+>> - Remove unsed thing
+****************************/
+
+/* Colors */
+:root {
+  /******************************************************************/
+  --uc-identity-colour-blue:      #89B4FA;
+  --uc-identity-colour-turquoise: #94E2D5;
+  --uc-identity-colour-green:     #A6E3A1;
+  --uc-identity-colour-yellow:    #F9E2AF;
+  --uc-identity-colour-orange:    #FAB387;
+  --uc-identity-colour-red:       #F38BA8;
+  --uc-identity-colour-pink:      #F5C2E7;
+  --uc-identity-colour-purple:    #CBA6F7;
+
+  --uc-base-colour:               #1E1E2E;
+  --uc-highlight-colour:          #181825;
+  --uc-inverted-colour:           #CDD6F4;
+  --uc-muted-colour:              #6C7086;
+  --uc-accent-colour:             var(--uc-identity-colour-purple);
+  /******************************************************************/
+
+  --lwt-frame: var(--uc-base-colour) !important;
+  --lwt-accent-color: var(--lwt-frame) !important;
+  --lwt-text-color: var(--uc-inverted-colour) !important;
+
+  --toolbar-field-color: var(--uc-inverted-colour) !important;
+
+  --toolbar-field-focus-color: var(--uc-inverted-colour) !important;
+  --toolbar-field-focus-background-color: var(--uc-highlight-colour) !important;
+  --toolbar-field-focus-border-color: transparent !important;
+
+  --toolbar-field-background-color: var(--lwt-frame) !important;
+  --lwt-toolbar-field-highlight: var(--uc-inverted-colour) !important;
+  --lwt-toolbar-field-highlight-text: var(--uc-highlight-colour) !important;
+  --urlbar-popup-url-color: var(--uc-accent-colour) !important;
+
+  --lwt-tab-text: var(--lwt-text-colour) !important;
+
+  --lwt-selected-tab-background-color: var(--uc-highlight-colour) !important;
+
+  --toolbar-bgcolor: var(--lwt-frame) !important;
+  --toolbar-color: var(--lwt-text-color) !important;
+  --toolbarseparator-color: var(--uc-accent-colour) !important;
+  --toolbarbutton-hover-background: var(--uc-highlight-colour) !important;
+  --toolbarbutton-active-background: var(--toolbarbutton-hover-background) !important;
+
+  --lwt-sidebar-background-color: var(--lwt-frame) !important;
+  --sidebar-background-color: var(--lwt-sidebar-background-color) !important;
+
+  --urlbar-box-bgcolor: var(--uc-highlight-colour) !important;
+  --urlbar-box-text-color: var(--uc-muted-colour) !important;
+  --urlbar-box-hover-bgcolor: var(--uc-highlight-colour) !important;
+  --urlbar-box-hover-text-color: var(--uc-inverted-colour) !important;
+  --urlbar-box-focus-bgcolor: var(--uc-highlight-colour) !important;
+
+  --tabpanel-background-color: var(--uc-base-colour) !important;
+}
+
+.identity-color-blue      { --identity-tab-color: var(--uc-identity-colour-blue)      !important; --identity-icon-color: var(--uc-identity-colour-blue)      !important;  }
+.identity-color-turquoise { --identity-tab-color: var(--uc-identity-colour-turquoise) !important; --identity-icon-color: var(--uc-identity-colour-turquoise) !important; }
+.identity-color-green     { --identity-tab-color: var(--uc-identity-colour-green)     !important; --identity-icon-color: var(--uc-identity-colour-green)     !important; }
+.identity-color-yellow    { --identity-tab-color: var(--uc-identity-colour-yellow)    !important; --identity-icon-color: var(--uc-identity-colour-yellow)    !important; }
+.identity-color-orange    { --identity-tab-color: var(--uc-identity-colour-orange)    !important; --identity-icon-color: var(--uc-identity-colour-orange)    !important; }
+.identity-color-red       { --identity-tab-color: var(--uc-identity-colour-red)       !important; --identity-icon-color: var(--uc-identity-colour-red)       !important; }
+.identity-color-pink      { --identity-tab-color: var(--uc-identity-colour-pink)      !important; --identity-icon-color: var(--uc-identity-colour-pink)      !important; }
+.identity-color-purple    { --identity-tab-color: var(--uc-identity-colour-purple)    !important; --identity-icon-color: var(--uc-identity-colour-purple)    !important; }
+
+/* Layout */
+:root {
+  --toolbarbutton-border-radius: var(--uc-border-radius) !important;
+  --tab-border-radius: var(--uc-border-radius) !important;
+  --arrowpanel-border-radius: var(--uc-border-radius) !important;
+}
+
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#navigator-toolbox,
+#sidebar-box,
+#nav-bar { box-shadow: none !important; }
+
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box,
+#nav-bar { border: none !important; }
+
+.titlebar-spacer { display: none !important; }
+
+#urlbar-input-container[pageproxystate="valid"]
+  > #tracking-protection-icon-container
+  > #tracking-protection-icon-box
+  > #tracking-protection-icon {
+    padding-bottom: 1px;
+}
+
+#PersonalToolbar {
+  padding: 6px !important;
+  box-shadow: inset 0 0 50vh rgba(0, 0, 0, var(--uc-darken-toolbar)) !important;;
+}
+
+#statuspanel #statuspanel-label {
+  border: none !important;
+  border-radius: var(--uc-border-radius) !important;
+}
+
+/* Tabbar */
+:root {
+   --uc-active-tab-width:   clamp(100px, 30vw, 300px);
+   --uc-inactive-tab-width: clamp(100px, 20vw, 200px);
+   --show-tab-close-button: none;
+   --show-tab-close-button-hover: none;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) { margin-inline-start: 0 !important; }
+
+#alltabs-button { display: var(--uc-show-all-tabs-button) !important; }
+
+.tabbrowser-tab
+  >.tab-stack
+  > .tab-background { box-shadow: none !important;  }
+
+#tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([multiselected])
+  > .tab-stack
+  > .tab-background:-moz-lwtheme { outline-color: var(--toolbarseparator-color) !important; }
+
+.tabbrowser-tab:not([pinned]) .tab-close-button { display: var(--show-tab-close-button) !important; }
+.tabbrowser-tab:not([pinned]):hover .tab-close-button { display: var(--show-tab-close-button-hover) !important }
+
+.tabbrowser-tab[selected][fadein]:not([pinned]) { max-width: var(--uc-active-tab-width) !important; }
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) { max-width: var(--uc-inactive-tab-width) !important; }
+
+.tabbrowser-tab[usercontextid]
+  > .tab-stack
+  > .tab-background
+  > .tab-context-line {
+    margin: -1px var(--container-tabs-indicator-margin) 0 var(--container-tabs-indicator-margin) !important;
+    height: 1px !important;
+
+    box-shadow: var(--uc-identity-glow) var(--identity-tab-color) !important;
+}
+
+/* Disable */
+.titlebar-buttonbox-container { display: none !important; }
+
+#alltabs-button { display: none !important; }
+#PanelUI-button { display: none !important; }
+#urlbar-go-button { display: none !important; }
+#stop-reload-button { display: none !important; }
+#identity-permission-box { display: none !important; }
+#back-button, #forward-button { display: none !important; }
+#tracking-protection-icon-container { display: none !important; }
+#page-action-buttons > :not(#urlbar-zoom-button) { display: none !important; }
+#customizableui-special-spring1, #customizableui-special-spring2 { display: none !important; }

@@ -12,7 +12,10 @@
         darkreader
       ];
 
+      userChrome = builtins.readFile ./userChrome.css;
+
       settings = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 	      "webgl.disabled" = true;
 
 	      "app.normandy.first_run" = false;
