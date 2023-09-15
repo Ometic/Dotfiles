@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       main = {
-        font = "JetBrainsMono Nerdfont:size=8:line-height=16px";
+        font = "JetBrainsMono Nerdfont:size=9:line-height=16px";
         pad = "12x12";
       };
       colors = {
