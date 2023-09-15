@@ -8,6 +8,8 @@
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         ublock-origin
         onepassword-password-manager
+        web-scrobbler
+        darkreader
       ];
 
       settings = {
@@ -50,7 +52,7 @@
 	
       	"network.proxy.socks_remote_dns" = true;
 
-      	"places.history.enabled" = false;
+      	"places.history.enabled" = true;
 
       	"privacy.history.custom" = true;
       	"privacy.donottrackheader.enabled" = true;
