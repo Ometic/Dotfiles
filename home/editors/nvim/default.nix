@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 let
+  treesitter = pkgs.vimPlugins.nvim-treesitter.withPlugins(lang: [
+    lang.nix
+    lang.lua
+  ]);
+
   catppuccin = pkgs.vimUtils.buildVimPlugin {
       name = "catppuccin";
       src = pkgs.fetchFromGitHub {
@@ -25,7 +30,12 @@ in {
         plugin = catppuccin;
         config = ''Utils.LoadPlugin("catppuccin")'';
         type = "lua";
-      } 
+      }
+      {
+        plugin = treesitter;
+        config = ''Utils.LoadPlugin("nvim-treesitter")'';
+        type = "lua";
+      }
     ];
 
     extraLuaConfig = ''

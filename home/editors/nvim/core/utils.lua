@@ -53,7 +53,8 @@ function Utils.LoadPlugin(Name)
   Utils.LoadAutocmds(PluginConfig["Autocmds"])
   Utils.LoadMappings(PluginConfig["Mappings"])
 
-  PluginConfig.Config()
+  PluginConfig.Config = PluginConfig.Config or function(Plugin) end
+  PluginConfig.Config(Plugin)
 end
 
 return Utils
