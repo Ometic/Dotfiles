@@ -20,6 +20,9 @@ in {
   home.file.".config/nvim/lua/plugins".source = ./plugins;
 
   home.packages = with pkgs; [
+    # Nix
+    nixd
+
     # Lua
     lua-language-server stylua
 
@@ -70,6 +73,11 @@ in {
       {
         plugin = nvim-lspconfig;
         config = ''Utils.LoadPlugin("lspconfig")'';
+        type = "lua";
+      }
+      {
+        plugin = null-ls-nvim;
+        config = ''Utils.LoadPlugin("null-ls")'';
         type = "lua";
       }
       {

@@ -9,6 +9,7 @@ PluginConfig["NoAutoSetup"] = true
 
 function PluginConfig.Config(Plugin)
   local Servers = {
+    ["nixd"] = {},
     ["lua_ls"] = {
       ["settings"] = {
         ["Lua"] = {
