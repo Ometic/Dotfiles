@@ -41,22 +41,23 @@ function Utils.LoadPlugin(Name)
     error("Failed to load plugin: " .. Name .. " (PLUGIN_NOT_FOUND)")
   end
 
-  local Plugin = PluginConfig["Plugin"] or _Plugin
+  PluginConfig["Plugin"] = PluginConfig["Plugin"] or _Plugin
 
   PluginConfig["Options"] = PluginConfig["Options"] or {}
   PluginConfig["NOptions"] = PluginConfig["NOptions"] or {}
   PluginConfig["Autocmds"] = PluginConfig["Autocmds"] or {}
   PluginConfig["Mappings"] = PluginConfig["Mappings"] or {}
 
-
-  Plugin.setup(PluginConfig["Options"])
+  if not PluginConfig["NoAutoSetup"] then
+    PluginConfig["Plugin"].setup(PluginConfig["Options"])
+  end
   
   Utils.LoadOptions(PluginConfig["NOptions"])
   Utils.LoadAutocmds(PluginConfig["Autocmds"])
   Utils.LoadMappings(PluginConfig["Mappings"])
 
   PluginConfig.Config = PluginConfig.Config or function(_) end
-  PluginConfig.Config(Plugin)
+  PluginConfig.Config(PluginConfig["Plugin"])
 end
 
 return Utils

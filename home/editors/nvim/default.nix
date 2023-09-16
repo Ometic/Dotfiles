@@ -20,6 +20,10 @@ in {
   home.file.".config/nvim/lua/plugins".source = ./plugins;
 
   home.packages = with pkgs; [
+    # Lua
+    lua-language-server stylua
+
+    # Telescope
     ripgrep
   ];
 
@@ -60,9 +64,27 @@ in {
         config = ''Utils.LoadPlugin("telescope")'';
         type = "lua";
       }
+      { plugin = telescope-file-browser-nvim; }
+
+      # Lsp
       {
-        plugin = telescope-file-browser-nvim;
+        plugin = nvim-lspconfig;
+        config = ''Utils.LoadPlugin("lspconfig")'';
+        type = "lua";
       }
+      {
+        plugin = luasnip;
+        type = "lua";
+      }
+      {
+        plugin = nvim-cmp;
+        config = ''Utils.LoadPlugin("cmp")'';
+        type = "lua";
+      }
+      { plugin = cmp_luasnip; }
+      { plugin = cmp-nvim-lsp; }
+      { plugin = cmp-buffer; }
+      { plugin = cmp-path; }
     ];
 
     extraLuaConfig = ''
