@@ -9,6 +9,9 @@ local Options = {
   ["completeopt"] = "menuone,noselect",
   ["undofile"] = true,
   ["updatetime"] = 250,
+  ["laststatus"] = 3,
+  ["showmode"] = false,
+  ["statusline"] = "%!v:lua.require('core.statusline').GetStatusLine()",
   
   --// Performance
   ["lazyredraw"] = true,
