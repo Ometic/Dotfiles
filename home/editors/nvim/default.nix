@@ -43,6 +43,11 @@ in {
         config = ''Utils.LoadPlugin("nvim-treesitter")'';
         type = "lua";
       }
+      {
+        plugin = nvim-web-devicons;
+        config = ''Utils.LoadPlugin("nvim-web-devicons")'';
+        type = "lua";
+      }
 
       # Telescope
       {
