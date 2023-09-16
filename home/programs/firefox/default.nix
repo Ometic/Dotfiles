@@ -136,6 +136,10 @@
 
       	"privacy.resistFingerprinting.block_mozAddonManager" = true;
       	"privacy.resistFingerprinting.letterboxing" = true;
+
+        "network.trr.mode" = 3;
+        "network.trr.custom_uri" = "https://base.dns.mullvad.net/dns-query";
+        "network.trr.uri" = "https://base.dns.mullvad.net/dns-query";
       };
     };
   };
