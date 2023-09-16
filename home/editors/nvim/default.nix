@@ -19,6 +19,10 @@ in {
   home.file.".config/nvim/lua/core".source = ./core;
   home.file.".config/nvim/lua/plugins".source = ./plugins;
 
+  home.packages = with pkgs; [
+    ripgrep
+  ];
+
   programs.neovim = {
     enable = true;
     package = pkgs.neovim-nightly;
@@ -26,6 +30,9 @@ in {
     vimAlias = true;
 
     plugins = with pkgs.vimPlugins; [
+      plenary-nvim
+
+      # Eye Candy
       {
         plugin = catppuccin;
         config = ''Utils.LoadPlugin("catppuccin")'';
@@ -35,6 +42,16 @@ in {
         plugin = treesitter;
         config = ''Utils.LoadPlugin("nvim-treesitter")'';
         type = "lua";
+      }
+
+      # Telescope
+      {
+        plugin = telescope-nvim;
+        config = ''Utils.LoadPlugin("telescope")'';
+        type = "lua";
+      }
+      {
+        plugin = telescope-file-browser-nvim;
       }
     ];
 
