@@ -20,9 +20,6 @@ in {
   home.file.".config/nvim/lua/plugins".source = ./plugins;
 
   home.packages = with pkgs; [
-    # Nix
-    nixd
-
     # Lua
     lua-language-server stylua
 
