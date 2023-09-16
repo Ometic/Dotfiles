@@ -1,5 +1,6 @@
 --// Imports \\--
 local Api = vim.api
+local Function = vim.fn
 
 --// Core \\--
 local Statusline = {}
@@ -77,9 +78,51 @@ function Statusline.Mode()
   return Statusline.CreateBlock("", Mode[1], Mode[2])
 end
 
+function Statusline.File()
+  local Icon = "󰈚"
+  local Filename = (Function.expand("%") == "") and "No File" or Function.expand("%:t")
+
+  if Filename ~= "No File" then
+    local DevIcon = require("nvim-web-devicons")
+
+    local _Icon = DevIcon.get_icon(Filename)
+    if _Icon then Icon = _Icon end
+  end
+
+  return Statusline.CreateBlock(Icon, Filename, "Red")
+end
+
+function Statusline.CWD()
+  local DirectoryName = Function.fnamemodify(Function.getcwd(), ":t")
+
+  return Statusline.CreateBlock("󰉋", DirectoryName, "Green")
+end
+
+function Statusline.Cursor()
+  local StartLine = 1
+  local TotalLine = Function.line("$")
+  local CurrentLine = Function.line(".") 
+
+  local Persent = math.modf((CurrentLine / TotalLine) * 100)
+  local Text = Persent .. tostring("%%")
+
+  Text = (CurrentLine == StartLine and "Top") or Text
+  Text = (CurrentLine == TotalLine and "Bot") or Text
+
+  return Statusline.CreateBlock("", Text, "Yellow")
+end
+
 function Statusline.GetStatusLine()
   local Modules = {
-    Statusline.Mode()
+    Statusline.Mode(),
+    Statusline.File(),
+
+    "%=",
+    "",
+    "%=",
+
+    Statusline.CWD(),
+    Statusline.Cursor()
   }
 
   return table.concat(Modules)

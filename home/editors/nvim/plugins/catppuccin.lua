@@ -38,6 +38,7 @@ PluginConfig["Options"] = {
     GenerateStatuslineHL("Magenta", "mauve")
     GenerateStatuslineHL("Cyan", "sky")
     GenerateStatuslineHL("Orange", "peach")
+    GenerateStatuslineHL("Red", "red")
     GenerateStatuslineHL("Green", "green")
     GenerateStatuslineHL("Yellow", "yellow")
     GenerateStatuslineHL("Teal", "teal")
