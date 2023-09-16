@@ -1,6 +1,7 @@
 {
   programs.foot = {
     enable = true;
+    server.enable = true;
     settings = {
       main = {
         font = "JetBrainsMono Nerdfont:size=9:line-height=16px";
