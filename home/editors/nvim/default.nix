@@ -39,6 +39,11 @@ in {
         type = "lua";
       }
       {
+        plugin = bufferline-nvim;
+        config = ''Utils.LoadPlugin("bufferline")'';
+        type = "lua";
+      }
+      {
         plugin = treesitter;
         config = ''Utils.LoadPlugin("nvim-treesitter")'';
         type = "lua";
