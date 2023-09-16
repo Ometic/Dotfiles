@@ -25,7 +25,7 @@
         bright5 = "f5c2e7";
         bright6 = "94e2d5";
         bright7 = "a6adc8";
-        alpha = 0.5;
+        alpha = 0.65;
       };
     };
   };
