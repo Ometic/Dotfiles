@@ -9,6 +9,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   zramSwap.enable = true;
+  zramSwap.priority = 100;
 
   # Temp
   boot.loader.systemd-boot.enable = true;
