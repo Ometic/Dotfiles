@@ -1,8 +1,10 @@
 # Dotfiles
-> My nixos config
+> Configuration files for my nixos machine
 
 ## About
-TODO
+Ometic NixOS configuration fresh from the oven using [flake](https://nixos.wiki/wiki/Flakes), [flake-parts](https://github.com/hercules-ci/flake-parts) and [home-manager](https://github.com/nix-community/home-manager)
+
+See an overview of the flake by using `nix flake show github:ometic/dotfiles`
 
 ## Programs
 | Category           | Name                                                   |
