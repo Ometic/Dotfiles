@@ -1,9 +1,8 @@
 {
   imports = [
-    ../shell
-
     ../desktop/hyprland
 
+    ../programs/zsh.nix
     ../programs/xdg.nix
     ../programs/git.nix
     ../programs/ssh.nix

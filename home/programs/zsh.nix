@@ -1,4 +1,10 @@
+{ pkgs, ... }:
+
 {
+  home.packages = with pkgs; [ 
+    eza 
+  ];
+
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";

@@ -31,6 +31,7 @@ in {
     enable = true;
     package = pkgs.neovim-nightly;
 
+    defaultEditor = true;
     vimAlias = true;
 
     plugins = with pkgs.vimPlugins; [
