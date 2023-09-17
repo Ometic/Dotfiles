@@ -7,6 +7,6 @@
     (pkgs.discord.override { withVencord = true; })
 
     # Cli
-    neofetch xdg-utils
+    xdg-utils
   ];
 }

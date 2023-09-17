@@ -1,7 +1,11 @@
 { inputs, withSystem, ... }:
 
 let
-  sharedModules = [../.];
+  sharedModules = [
+    ../.
+    ../desktop
+    ../programs
+  ];
 
   homeProfiles = {
     zelix = [./zelix.nix] ++ sharedModules;
