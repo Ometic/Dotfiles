@@ -27,5 +27,16 @@
       ];
 
       systems = [ "x86_64-linux" ];
+
+      perSystem = { config, pkgs, ... }:
+      {
+        devShells.default = pkgs.mkShell {
+          name = "Dotfiles";
+          packages = with pkgs; [
+            cz-cli
+            commitizen
+          ];
+        };
+      };
     };
 }
