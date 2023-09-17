@@ -8,6 +8,7 @@
     ../programs/ssh.nix
     ../programs/foot.nix
     ../programs/firefox
+    ../programs/games.nix
     ../programs/direnv.nix
     ../programs/packages.nix
 
