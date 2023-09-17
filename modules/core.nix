@@ -69,7 +69,7 @@
   # Environment
   environment.variables = {
     MOZ_ENABLE_WAYLAND = "1";
-    NIXOS_CONFIG = "$HOME/dotfiles";
+    NIXOS_CONFIG = "$HOME/Development/dotfiles";
   };
 
   # Security
