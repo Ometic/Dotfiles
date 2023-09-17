@@ -13,7 +13,7 @@
 
     shellAliases = {
       ls = "eza --icons --git";
-      la = "ls --la";
+      la = "ls -la";
       tree = "ls --tree";
       rebuild = "sudo nixos-rebuild switch --flake $NIXOS_CONFIG";
       dot = "cd $NIXOS_CONFIG";
