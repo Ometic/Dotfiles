@@ -13,7 +13,7 @@
     extraModulePackages = [ ];
   };
 
-  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/b0d86cd4-cd57-40cf-91c0-b9d8ca1bcec1";
+  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/4b26e844-bf6c-420a-b736-458c35aa70ba";
 
   fileSystems."/" = { 
     device = "/dev/mapper/cryptroot";
